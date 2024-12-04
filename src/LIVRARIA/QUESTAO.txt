@@ -1,0 +1,41 @@
+Descrição: Você foi designado para implementar um sistema de gerenciamento de estoque de uma pequena livraria utilizando orientação a objetos. A livraria deseja controlar o estoque de livros e suas operações de venda e reposição. Além disso, o sistema deve limitar o número de livros cadastrados a um máximo de 100.
+
+Requisitos:
+
+    Crie a classe Livro com os seguintes atributos:
+        String titulo
+        String autor
+        String codigo
+        int quantidade (representa a quantidade em estoque)
+
+    E os seguintes métodos:
+        void vender(int quantidadeVendida): Reduz o número de livros disponíveis no estoque. Caso a quantidade vendida seja maior do que a disponível, exiba uma mensagem de erro.
+        void repor(int quantidadeReposta): Aumenta o número de livros disponíveis no estoque.
+        String toString(): Retorna uma representação em String do livro com as informações do título, autor, código e quantidade em estoque.
+
+    Crie a classe Livraria que irá gerenciar os livros com um array de tamanho 100:
+        Livro[] estoque (um array de Livro com no máximo 100 elementos)
+        int numLivros (armazena o número atual de livros cadastrados)
+
+    E os seguintes métodos:
+        void adicionarLivro(Livro livro): Adiciona um novo livro ao estoque. Se o número de livros no estoque atingir o limite de 100, exiba uma mensagem de erro.
+        Livro buscarLivro(String codigo): Retorna o livro com o código informado ou null se o livro não for encontrado.
+        void listarLivros(): Exibe todos os livros cadastrados, mostrando o título, autor, código e quantidade em estoque.
+
+    Crie a classe Main para simular a operação da livraria. A seguir, implemente um menu que permita:
+        Adicionar um novo livro ao estoque
+        Buscar um livro pelo código e exibir suas informações
+        Vender uma quantidade de um determinado livro
+        Repor o estoque de um determinado livro
+        Listar todos os livros cadastrados na livraria
+
+Restrições:
+
+    O array de livros pode armazenar no máximo 100 livros.
+    A livraria não pode vender mais livros do que há em estoque.
+
+Exemplo de Uso:
+
+    Cadastrar 3 livros.
+    Tentar vender uma quantidade maior que o estoque disponível.
+    Listar todos os livros disponíveis na livraria.
